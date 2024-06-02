@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import AccordionParent from "./accordion/Accordion";
+import "./App.css";
+import Carousel from "./caraousel/Caraousel";
+import Autocomplete from "./debounce_autocomplete/AutoComplete";
+import Dropdown from "./dropdown/DropDown";
+import UserList from "./fetch_data/FetchData";
+import MyLazyLoadingComponent from "./lazy_component/LazyComponent";
+import LoadOnScroll from "./load_scroll/LoadScroll";
+import ModalButton from "./modal/Modal";
+import StarRating from "./rating/StarRatings";
+import ReplyComment from "./reply_comment/ReplyCommnet";
+import Stopwatch from "./stopwatch/Stopwatch";
+import TabButtons from "./tab_buttons/TabButtons";
+import ToDoList from "./todo/ToDoList";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App">
+        <Autocomplete />
+        <Carousel />
+        <StarRating />
+        <Stopwatch />
+        <ModalButton />
+        <AccordionParent />
+        <TabButtons />
+        <ToDoList />
+        <UserList />
+        <ReplyComment />
+        <MyLazyLoadingComponent />
+        <Dropdown />
+        <LoadOnScroll />
+      </div>
     </div>
   );
 }
