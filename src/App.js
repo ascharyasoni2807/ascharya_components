@@ -21,22 +21,22 @@ function App() {
   return (
     <div className="App">
       <div className="App">
-        <Game />
-        <Autocomplete />
-        {/* <Calculator /> */}
+        <StarRating />
         <UserForm />
         <Carousel />
-        <StarRating />
-        <Stopwatch />
-        <ModalButton />
         <AccordionParent />
-        <TabButtons />
         <ToDoList />
+        <ReplyComment />
+        <ModalButton />
+        <Game />
+        <Dropdown />
+        <Autocomplete />
+        <Stopwatch />
+        <TabButtons />
         <PaginationList />
         <UserList />
-        <ReplyComment />
         <MyLazyLoadingComponent />
-        <Dropdown />
+
         <LoadOnScroll />
       </div>
     </div>
