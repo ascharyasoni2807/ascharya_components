@@ -16,6 +16,7 @@ import Stopwatch from "./stopwatch/Stopwatch";
 import TabButtons from "./tab_buttons/TabButtons";
 import Game from "./tic_tac_toe/TicTacToe";
 import ToDoList from "./todo/ToDoList";
+import Clock from "./wall_clock/Clock";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <ToDoList />
         <ReplyComment />
         <ModalButton />
+        <Clock />
         <Game />
         <Dropdown />
         <Autocomplete />
