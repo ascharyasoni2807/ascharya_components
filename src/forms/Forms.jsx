@@ -35,10 +35,10 @@ function UserForm() {
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: type === "checkbox" ? checked : value,
+      [name]: value,
     }));
 
     setErrors((prevErrors) => ({
@@ -51,7 +51,6 @@ function UserForm() {
     const newErrors = {};
     if (!formData.name) newErrors.name = "Name is required";
     if (!formData.email) newErrors.email = "Email is required";
-    if (!formData.gender) newErrors.gender = "Gender is required";
 
     return newErrors;
   };
@@ -67,8 +66,6 @@ function UserForm() {
       setFormData({
         name: "",
         email: "",
-        subscribe: false,
-        gender: "",
       });
     }
   };
@@ -92,19 +89,10 @@ function UserForm() {
         error={errors.email}
       />
 
-      <div>
-        <label>Gender:</label>
-        <Input
-          label="Male"
-          type="radio"
-          name="gender"
-          value="Male"
-          checked={formData.gender === "Male"}
-          onChange={handleChange}
-          error={errors.gender}
-        />
-      </div>
       <button type="submit">Submit</button>
+      <div>
+        {formData.name} {formData.email}
+      </div>
     </form>
   );
 }
